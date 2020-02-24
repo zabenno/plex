@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+MAINTAINER zabenno
+
+RUN apt update && apt upgrade -y
+RUN apt install transmission-daemon -y
+
+RUN sed -i "s/rpc-password\": \"transmission/rpc-password\": \"{{ transmission_password }}/g" /etc/transmission-daemon/settings.json
+
+CMD transmission-daemon ; while true ; do sleep 1000; done;

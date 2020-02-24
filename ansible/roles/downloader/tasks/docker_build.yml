@@ -1,0 +1,20 @@
+---
+
+- name: Transfer Dockerfile
+  template:
+          src: Dockerfile.j2
+          dest: {{ dockerfile_dir }}Dockerfile
+          mode: '0644'
+
+- name: Pull base docker image.
+  docker_image:
+          name: {{ base_image }}
+          source: pull
+
+- name: Create transmission image
+  docker_image:
+          name: downloader:latest
+          build:
+                  path: {{ dockerfile_dir }}
+                  source: build
+

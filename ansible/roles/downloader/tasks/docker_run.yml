@@ -1,0 +1,7 @@
+---
+
+- name: Ensure docker container is running.
+  docker_container:
+          name: downloader_container
+          image: downloader:latest
+          state: started

@@ -1,0 +1,11 @@
+---
+galaxy_info:
+        author: zabenno
+        description: Creates a docker image to download files and runs it.
+        platforms:
+                - name: Ubuntu
+                  versions:
+                          - 18.04
+        galaxy_tags:
+                - docker
+                - transmission
