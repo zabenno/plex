@@ -22,5 +22,5 @@
           name: downloader:latest
           build:
                   path: "{{ dockerfile_dir }}"
-                  source: build
+          source: build
 
