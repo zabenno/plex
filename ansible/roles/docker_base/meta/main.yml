@@ -1,0 +1,12 @@
+---
+galaxy_info:
+        author: zabenno
+        description: Base installation of docker configurable via ansible.
+        platforms:
+                - name: Ubuntu
+                  versions:
+                          - all
+                galaxy_tags:
+                        - docker
+                        - python
+                        - pip

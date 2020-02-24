@@ -1,0 +1,6 @@
+---
+
+- name: Installing docker.
+  hosts: all
+  roles:
+          - docker_base

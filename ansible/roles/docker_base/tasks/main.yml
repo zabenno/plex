@@ -1,0 +1,18 @@
+---
+
+#Install docker management dependencies.
+- name: Install dependencies.
+  apt:
+          name: "{{ docker_dependencies }}"
+          state: latest
+
+#Install docker
+- name: Install docker
+  apt:
+          name: docker.io
+          state: latest
+
+#Install docker management module for python.
+- name: Install docker module for python
+  pip:
+          name: docker
