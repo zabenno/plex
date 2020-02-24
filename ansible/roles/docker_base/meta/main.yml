@@ -6,7 +6,7 @@ galaxy_info:
                 - name: Ubuntu
                   versions:
                           - all
-                galaxy_tags:
-                        - docker
-                        - python
-                        - pip
+        galaxy_tags:
+                - docker
+                - python
+                - pip
