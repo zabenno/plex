@@ -1,5 +1,11 @@
 ---
 
+- name: Ensure directory exists.
+  file:
+          state: directory
+          path: "{{ dockerfile_dir }}"
+          mode: '0644'
+
 - name: Transfer Dockerfile
   template:
           src: Dockerfile.j2
